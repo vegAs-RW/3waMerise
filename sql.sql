@@ -49,7 +49,7 @@ CREATE TABLE evaluation(
    FOREIGN KEY(user_id) REFERENCES teacher(user_id)
 );
 
-CREATE TABLE contain(
+CREATE TABLE sessionCourse(
    session_id INT,
    course_id INT,
    PRIMARY KEY(session_id, course_id),
@@ -64,7 +64,7 @@ CREATE TABLE note(
    FOREIGN KEY(evaluation_id) REFERENCES evaluation(evaluation_id)
 );
 
-CREATE TABLE has(
+CREATE TABLE evaluationCategory(
    evaluation_id INT,
    category_id INT,
    PRIMARY KEY(category_id, evaluation_id),
